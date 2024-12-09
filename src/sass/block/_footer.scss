@@ -1,0 +1,29 @@
+.footer {
+   background-color: #000;
+   height: 200px;
+   padding: 88px 192px;
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__add{
+      font-weight: 400;
+      font-size: 20px;
+      color: var(--color-text-light);
+      font-style: normal;
+   }
+   &__social {
+      img{
+         border: 1px solid #fff;
+         padding: 5px;
+         &:not(:last-child){margin-right: 30px;}
+      }
+   }
+
+   &__tell {
+      font-weight: 400;
+      font-size: 20px;
+      color: var(--color-text-light);
+   }
+}

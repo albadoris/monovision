@@ -1,0 +1,71 @@
+//TODO ПОДКЛЮЧЕНИЕ ШРИФТОВ */
+
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-ThinBETA.woff2') format('woff2'),
+        url('../fonts/Inter-ThinBETA.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+//TODO ПОДКЛЮЧЕНИЕ СТИЛЕЙ */
+
+@import 'base/mixins';
+@import 'base/variables';
+@import 'base/null';
+
+//TODO ----------Свои настройкит----------- */
+
+body {
+  line-height: 1;
+  font-family: "Inter", sans-serif;
+  background-color: #f5f5f7;
+  color: var(--color-text);
+  font-weight: 400;
+  font-size: 16px;
+}
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.main {
+    flex-grow: 1;
+}
+  
+[class*="__container"] {
+  // max-width: 1480px;
+  // margin: 0px auto;
+  padding: 0px var(--container-padding-inline);
+}
+
+//TODO ПОДКЛЮЧЕНИЕ СТИЛЕЙ */
+
+@import 'block/buttons';
+@import 'block/footer';
+@import 'block/forms';
+@import 'block/header';
+@import 'block/main';
+@import 'block/media';
+@import 'block/modal';
+
+
+
+

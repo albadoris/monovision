@@ -1,0 +1,117 @@
+//TODO - Общая информация
+/* 
+Большие экраны - 1440px
+Маленькие экраны - не меньше 1024px
+Планшеты - от 1024 до 768
+Мобильные устройства - ниже 768
+//* Более сложные условия */
+/*
+@media (min-width: 479.98px) and (max-width: 767.98px)
+*/
+//TODO - КОНЕЦ общей информаций
+
+
+//* Условные ПК, ноуты и телевизоры */
+//* 1050 из макета (контейнер + отступы) */
+@media screen and (max-width: 1480px){
+    // [class*="__container"] {
+    //     max-width: 940px;
+    // }  
+    .keywords{
+        padding: 0px 20px;
+    }
+    // .about{
+    //     &__text{
+
+    //     }
+    // }
+    
+} 
+//* Условные планшеты */
+@media (max-width: 991.98px){
+    // [class*="__container"] {
+    //     max-width: 750px;
+    // }  
+    
+}
+//* Условные мобилки */
+@media (max-width: 767.98px) {
+    // [class*="__container"] {
+    //     max-width: none;
+    // }
+    .promo{
+        background-image: url(../img/block1/Bg_1.jpg);
+        &__title{
+            font-size: 48px;
+        }
+        &__body{
+            &::before{
+                left: -40px;
+            }
+        }
+    }
+    .keywords{
+        &__item{
+            display: none;
+            &:nth-child(-n + 9){
+                display: list-item;
+            }
+        }
+    }
+    .title{
+        font-size: 36px;
+    }
+    .works{
+        padding-top: 50px;
+        &__grid{
+            column-gap: 20px;
+            row-gap: 30px;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    [class*="__container"] {
+        padding: 0px 5%;
+    }
+    .promo{
+        min-height: 500px;
+        padding-top: 50px;
+        &__title{
+            font-size: 26px;
+        }
+        &__text{
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        &__body{
+            margin-top: 233px;
+            &::before{
+                display: none;
+            }
+        }
+    }
+    .keywords{
+        margin-top: 10px;
+        &__item{
+            &:nth-last-child(-n + 11){
+                display: none;
+            }
+        }
+    }
+    .works {
+        padding-top: 50px;
+        &__grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr) 1.5fr;
+            column-gap: 0px;
+            row-gap: 30px;
+            margin-top: 50px;
+        }
+    }
+    .title{
+        font-size: 24px;
+    }
+}
+
